@@ -1,0 +1,17 @@
+@import 'src/styles/colors';
+@import 'src/styles/placeholders';
+
+.headline {
+	@extend %center;
+
+	.headline__content {
+		max-width: 482px;
+		font-family: 'Mark Offc Pro';
+		color: $dark-indigo;
+		font-size: 32px;
+		font-weight: bold;
+		line-height: 1.4;
+		letter-spacing: 0.25px;
+		text-align: center;
+	}
+}
