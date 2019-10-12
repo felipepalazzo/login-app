@@ -1,0 +1,10 @@
+[
+	{ "country": "United Kingdom", "code": 44 },
+	{ "country": "Germany", "code": 49 },
+	{ "country": "France", "code": 33 },
+	{ "country": "Spain", "code": 34 },
+	{ "country": "Italy", "code": 39 },
+	{ "country": "Romania", "code": 40 },
+	{ "country": "Poland", "code": 48 },
+	{ "country": "Austria", "code": 43 }
+]
