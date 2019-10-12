@@ -1,0 +1,13 @@
+@import 'src/styles/colors';
+
+.header {
+	background-color: $white;
+	position: fixed;
+	height: 80px;
+	width: 100%;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+}
