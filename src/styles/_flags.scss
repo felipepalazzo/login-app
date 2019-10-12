@@ -1,0 +1,39 @@
+.flag {
+	display: inline-block;
+	height: 36px;
+	width: 51px;
+	background-image: url('../assets/img/flags_sprite.png');
+	transform: scale(0.39) translate(-39px, -29px);
+
+	&.flag--united-kingdom {
+		background-position: 0 0;
+	}
+
+	&.flag--austria {
+		background-position: -867px 0;
+	}
+
+	&.flag--germany {
+		background-position: -918px -108px;
+	}
+
+	&.flag--france {
+		background-position: -612px -108px;
+	}
+
+	&.flag--spain {
+		background-position: -408px -324px;
+	}
+
+	&.flag--italy {
+		background-position: -153px -180px;
+	}
+
+	&.flag--romenia {
+		background-position: -561px -288px;
+	}
+
+	&.flag--poland {
+		background-position: -306px -288px;
+	}
+}

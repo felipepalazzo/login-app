@@ -1,0 +1,26 @@
+@import 'src/styles/colors';
+
+.form {
+	.form__code-container {
+		display: inline-block;
+		background-color: lightblue;
+	}
+
+	.form__code {
+		font-family: 'Mark Offc Pro';
+		font-weight: normal;
+		font-size: 32px;
+		line-height: 1.5;
+		letter-spacing: 0.1px;
+		color: $dark-indigo;
+		padding-right: 19px;
+	}
+
+	.form__arrow {
+		transition: transform 0.75s;
+
+		&.form__arrow--up {
+			transform: rotate(-180deg);
+		}
+	}
+}

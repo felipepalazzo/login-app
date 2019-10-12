@@ -1,0 +1,8 @@
+.list {
+	opacity: 0;
+	transition: opacity 0.25s linear 0.25s, height 0.75s ease-in-out;
+
+	&.list--active {
+		opacity: 1;
+	}
+}
