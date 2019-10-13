@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { stringToCssClass } from '../../helpers'
+import { stringToCssClass } from '../../utils/helpers'
 import './List.scss'
 
 export default function List({ data, onClick, isVisible }) {
@@ -28,6 +28,10 @@ export default function List({ data, onClick, isVisible }) {
 			</section>
 		</div>
 	)
+}
+
+List.defaultProps = {
+	data: []
 }
 
 List.propTypes = {

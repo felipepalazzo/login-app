@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import countries from '../../data/countries.json'
 import List from '../List'
 import Button from '../Button'
-import { stringToCssClass } from '../../helpers'
+import { stringToCssClass } from '../../utils/helpers'
 import arrow from '../../assets/img/arrow-down-dark-17.svg'
 import './Form.scss'
 
@@ -12,7 +12,7 @@ export default function Form() {
 	const [item, setItem] = useState(countries[0])
 	const [visible, setVisible] = useState(false)
 	const [disabled, setDisabled] = useState(true)
-	const onClick = item => {
+	const onListClick = item => {
 		setItem(item)
 		toggleList()
 	}
@@ -49,6 +49,7 @@ export default function Form() {
 							</div>
 							<input
 								type="text"
+								name="phone"
 								className="form__input"
 								placeholder="Your phone number"
 								maxLength="100"
@@ -60,7 +61,11 @@ export default function Form() {
 						</span>
 					</div>
 				</section>
-				<List data={countries} onClick={onClick} isVisible={visible} />
+				<List
+					data={countries}
+					onClick={onListClick}
+					isVisible={visible}
+				/>
 			</section>
 			<section className="button-container">
 				<Button disabled={disabled}>Next</Button>
