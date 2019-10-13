@@ -38,7 +38,7 @@ export default function Form() {
 										item.country
 									)}`}
 								></span>
-								<span className="form__code">{`+${item.code}`}</span>
+								<span className="form__code mop">{`+${item.code}`}</span>
 								<img
 									src={arrow}
 									className={`form__arrow form__arrow--${
@@ -50,13 +50,14 @@ export default function Form() {
 							<input
 								type="text"
 								name="phone"
-								className="form__input"
+								className="form__input mop"
 								placeholder="Your phone number"
 								maxLength="100"
+								autoFocus={true}
 								onChange={onChange}
 							/>
 						</form>
-						<span className="form-content__text">
+						<span className="form-content__text mop">
 							Use the one linked to your Monese account
 						</span>
 					</div>
@@ -69,7 +70,7 @@ export default function Form() {
 			</section>
 			<section className="button-container">
 				<Button disabled={disabled}>Next</Button>
-				<span className="button-container__text">
+				<span className="button-container__text mop">
 					Don’t have an account?
 				</span>
 			</section>

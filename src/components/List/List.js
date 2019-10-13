@@ -22,7 +22,7 @@ export default function List({ data, onClick, isVisible }) {
 					autoComplete="false"
 					onChange={onValueChange}
 				/>
-				<ul className="list">
+				<ul className="list mop">
 					{items.map(item => (
 						<li
 							className="list__item"

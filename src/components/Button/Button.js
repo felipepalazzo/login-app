@@ -6,7 +6,7 @@ import arrowRight from '../../assets/img/arrow-right-white.svg'
 export default function Button(props) {
 	return (
 		<button
-			className="button"
+			className="button mop"
 			onClick={props.onClick}
 			type="button"
 			disabled={props.disabled}
