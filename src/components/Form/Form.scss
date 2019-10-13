@@ -1,10 +1,32 @@
 @import 'src/styles/colors';
 @import 'src/styles/placeholders';
 
+.button-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	.button-container__text {
+		font-family: 'Mark Offc Pro';
+		color: $blue;
+		font-size: 16px;
+		font-weight: 500;
+		font-style: normal;
+		line-height: 1.5;
+		letter-spacing: 0.25px;
+		text-align: center;
+		padding-top: 40px;
+	}
+}
+
 .form-container {
+	margin-bottom: 100px;
+}
+
+.form-content {
 	@extend %center;
 
-	.form-container__text {
+	.form-content__text {
 		padding-top: 28px;
 		display: inline-block;
 		font-family: 'Mark Offc Pro';
@@ -27,7 +49,10 @@
 		width: 100%;
 		margin-left: 25px;
 		font-size: 32px;
-		color: $dodger-blue;
+
+		&::placeholder {
+			color: $dodger-blue;
+		}
 	}
 
 	.form__code-container {

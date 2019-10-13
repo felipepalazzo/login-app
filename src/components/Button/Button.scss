@@ -1,0 +1,26 @@
+@import 'src/styles/colors';
+@import 'src/styles/placeholders';
+
+.button {
+	@extend %center;
+	position: relative;
+	display: block;
+	padding: 0;
+	border: 0;
+	width: 280px;
+	height: 50px;
+	font-family: 'Mark Offc Pro';
+	background-color: $blue;
+	color: $white;
+	border-radius: 100px;
+	box-shadow: 0 3px 10px 0 rgba(62, 131, 255, 0.2);
+
+	&[disabled] {
+		opacity: 0.35;
+	}
+
+	.button__icon {
+		position: absolute;
+		right: 20px;
+	}
+}
