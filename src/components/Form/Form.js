@@ -6,15 +6,22 @@ import { stringToCssClass } from '../../helpers'
 import arrow from '../../assets/img/arrow-down-dark-17.svg'
 import './Form.scss'
 
+const regex = RegExp('^[0-9 -]{7,}$')
+
 export default function Form() {
 	const [item, setItem] = useState(countries[0])
 	const [visible, setVisible] = useState(false)
+	const [disabled, setDisabled] = useState(true)
 	const onClick = item => {
 		setItem(item)
 		toggleList()
 	}
 	const toggleList = () => {
 		setVisible(!visible)
+	}
+	const onChange = ({ target }) => {
+		const isDisabled = !regex.test(target.value)
+		setDisabled(isDisabled)
 	}
 	return (
 		<>
@@ -44,6 +51,8 @@ export default function Form() {
 								type="text"
 								className="form__input"
 								placeholder="Your phone number"
+								maxLength="100"
+								onChange={onChange}
 							/>
 						</form>
 						<span className="form-content__text">
@@ -54,7 +63,7 @@ export default function Form() {
 				<List data={countries} onClick={onClick} isVisible={visible} />
 			</section>
 			<section className="button-container">
-				<Button>Next</Button>
+				<Button disabled={disabled}>Next</Button>
 				<span className="button-container__text">
 					Don’t have an account?
 				</span>
