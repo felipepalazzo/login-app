@@ -1,9 +1,39 @@
 @import 'src/styles/colors';
+@import 'src/styles/placeholders';
+
+.form-container {
+	@extend %center;
+
+	.form-container__text {
+		padding-top: 28px;
+		display: inline-block;
+		font-family: 'Mark Offc Pro';
+		font-size: 14px;
+		font-weight: normal;
+		color: rgba($dark-indigo, 0.5);
+	}
+}
 
 .form {
+	display: flex;
+	border-bottom: solid 1px rgba($dark-indigo, 0.35);
+	width: 568px;
+	padding: 12.5px 0;
+
+	.form__input {
+		font-family: 'Mark Offc Pro';
+		border: 0;
+		outline: 0;
+		width: 100%;
+		margin-left: 25px;
+		font-size: 32px;
+		color: $dodger-blue;
+	}
+
 	.form__code-container {
-		display: inline-block;
-		background-color: lightblue;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
 	}
 
 	.form__code {
@@ -13,7 +43,7 @@
 		line-height: 1.5;
 		letter-spacing: 0.1px;
 		color: $dark-indigo;
-		padding-right: 19px;
+		padding: 0 19px;
 	}
 
 	.form__arrow {

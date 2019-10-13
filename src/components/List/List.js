@@ -5,18 +5,28 @@ import './List.scss'
 
 export default function List({ data, onClick, isVisible }) {
 	return (
-		<ul className={`list list--${isVisible ? 'active' : 'hidden'}`}>
-			{data.map(item => (
-				<li key={item.code} onClick={onClick.bind(this, item)}>
-					<span
-						className={`flag flag--sm flag--${stringToCssClass(
-							item.country
-						)}`}
-					></span>
-					{`${item.country} (+${item.code})`}
-				</li>
-			))}
-		</ul>
+		<div className="list-container">
+			<section className={`list-box ${isVisible ? 'active' : 'hidden'}`}>
+				<ul className="list">
+					{data.map(item => (
+						<li
+							className="list__item"
+							key={item.code}
+							onClick={onClick.bind(this, item)}
+						>
+							<div className="list__item__content">
+								<span
+									className={`flag flag--sm flag--${stringToCssClass(
+										item.country
+									)}`}
+								></span>
+								{`${item.country} (+${item.code})`}
+							</div>
+						</li>
+					))}
+				</ul>
+			</section>
+		</div>
 	)
 }
 

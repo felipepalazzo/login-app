@@ -3,7 +3,15 @@
 	height: 36px;
 	width: 51px;
 	background-image: url('../assets/img/flags_sprite.png');
-	transform: scale(0.39) translate(-39px, -29px);
+
+	&.flag--md {
+		margin-right: -25px;
+		transform: scale(0.5) translateX(-25px);
+	}
+
+	&.flag--sm {
+		transform: scale(0.39) translate(-39px, -29px);
+	}
 
 	&.flag--united-kingdom {
 		background-position: 0 0;

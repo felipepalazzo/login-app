@@ -10,32 +10,46 @@ export default function Form() {
 	const [visible, setVisible] = useState(false)
 	const onClick = item => {
 		setItem(item)
+		toggleList()
 	}
 	const toggleList = () => {
 		setVisible(!visible)
 	}
 	return (
 		<>
-			<form className="form">
-				<div className="form__code-container" onClick={toggleList}>
-					<span
-						className={`flag flag--${stringToCssClass(
-							item.country
-						)}`}
-					></span>
-					<span className="form__code">{`+${item.code}`}</span>
-					<img
-						src={arrow}
-						className={`form__arrow form__arrow--${
-							visible ? 'up' : 'down'
-						}`}
-						alt=""
-					/>
+			<section className="form-container">
+				<div>
+					<form className="form">
+						<div
+							className="form__code-container"
+							onClick={toggleList}
+						>
+							<span
+								className={`flag flag--md flag--${stringToCssClass(
+									item.country
+								)}`}
+							></span>
+							<span className="form__code">{`+${item.code}`}</span>
+							<img
+								src={arrow}
+								className={`form__arrow form__arrow--${
+									visible ? 'up' : 'down'
+								}`}
+								alt=""
+							/>
+						</div>
+						<input
+							type="text"
+							className="form__input"
+							placeholder="Your phone number"
+						/>
+					</form>
+					<span className="form-container__text">
+						Use the one linked to your Monese account
+					</span>
 				</div>
-				<input type="text" placeholder="Your phone number" />
-			</form>
+			</section>
 			<List data={countries} onClick={onClick} isVisible={visible} />
-			<span>Use the one linked to your Monese account</span>
 		</>
 	)
 }

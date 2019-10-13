@@ -1,8 +1,60 @@
-.list {
-	opacity: 0;
-	transition: opacity 0.25s linear 0.25s, height 0.75s ease-in-out;
+@import 'src/styles/colors';
 
-	&.list--active {
+.list-container {
+	position: relative;
+	max-width: 600px;
+	margin: auto;
+}
+
+.list-box {
+	background-color: $white;
+	box-sizing: border-box;
+	position: absolute;
+	top: -15px;
+	overflow: hidden;
+	padding: 20px 20px 5px 20px;
+	height: 0;
+	width: 100%;
+	opacity: 0;
+	z-index: 2;
+	transition: opacity 0.25s linear 0.25s, height 0.75s ease-in-out;
+	box-shadow: 0 0.3125em 0.3125em 0.3125em rgba(62, 131, 255, 0.07);
+
+	&.active {
 		opacity: 1;
+		height: 200px;
+	}
+}
+
+.list {
+	height: 100%;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-family: 'Mark Offc Pro';
+	color: $purple;
+	overflow-y: scroll;
+
+	.list__item {
+		position: relative;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		font-size: 0.875em;
+		padding-left: 40px;
+		margin-bottom: 6px;
+
+		.list__item__content {
+			cursor: pointer;
+
+			&:hover {
+				color: darken($purple, 50%);
+			}
+		}
+
+		.flag {
+			position: absolute;
+			top: 10.5px;
+			left: 0;
+		}
 	}
 }
