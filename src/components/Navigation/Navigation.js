@@ -8,7 +8,9 @@ export default function Navigation() {
 		<header className="header">
 			<nav className="navbar container">
 				<div className="navbar__content col-xs-12">
-					<a href="https://monese.com/">Monese</a>
+					<a href="https://monese.com/" className="logo">
+						Monese
+					</a>
 					<div type="navbar__option">
 						<img src={flag} alt="" />
 						<span className="navbar__option__text">English</span>

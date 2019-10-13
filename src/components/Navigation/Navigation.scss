@@ -11,15 +11,26 @@
 	width: 100%;
 }
 
+.navbar {
+	.navbar__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		width: 185px;
+		height: 37px;
+		text-indent: -99999px;
+		background-image: url('../../assets/img/monese.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
 .navbar,
 .navbar__content {
 	height: 100%;
-}
-
-.navbar__content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .navbar__option__text {
