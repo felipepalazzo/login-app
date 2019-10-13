@@ -6,7 +6,7 @@ import arrow from '../../assets/img/arrow-down-dark.svg'
 export default function Navigation() {
 	return (
 		<header className="header">
-			<nav className="navbar container">
+			<nav className="navbar container-fluid">
 				<div className="navbar__content col-xs-12">
 					<a href="https://monese.com/" className="logo">
 						Monese

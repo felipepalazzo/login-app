@@ -42,4 +42,8 @@
 	letter-spacing: normal;
 	color: $dark-indigo;
 	padding: 0 10px;
+
+	@media only screen and (max-width: 480px) {
+		display: none;
+	}
 }

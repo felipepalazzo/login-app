@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<Navigation />
-			<div className="container wrapper">
+			<div className="container-fluid wrapper">
 				<div className="col-xs-12">
 					<Headline>
 						Log in to your current account, wherever you are
